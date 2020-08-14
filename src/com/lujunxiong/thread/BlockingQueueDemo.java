@@ -9,6 +9,10 @@ import java.util.concurrent.TimeUnit;
  * @Author 陆军雄
  * @Date 2020/8/14
  * @Description: 阻塞队列
+ * 栈  后进先出
+ * 队列  先进先出
+ * 阻塞   必须要阻塞/不得不阻塞
+ *
  **/
 public class BlockingQueueDemo {
     public static void main(String[] args) throws InterruptedException {
