@@ -17,7 +17,7 @@ public class MyThreadPoolDemo {
     public static void main(String[] args) {
         //ExecutorService threadPool = Executors.newFixedThreadPool(5);//一个池5个受理线程，类似一个银行有5个受理窗口
         //ExecutorService threadPool =  Executors.newSingleThreadExecutor(); //一个银行网点，1个受理业务的窗口
-        //一个银行网点，可扩展受理业务的窗口，一池N个工作线程，类似一个银行有N个受理窗口
+        //一个银行网点，可扩展受理业务的+窗口，一池N个工作线程，类似一个银行有N个受理窗口
         ExecutorService threadPool =  Executors.newCachedThreadPool();
 
         try {
