@@ -23,10 +23,10 @@ import java.util.concurrent.CopyOnWriteArrayList;
  **/
 public class ListNotSafeDemo {
     public static void main(String[] args) {
-        //小数据量的时候，把线程不安全ArrayList的转换成线程安全的ArrayList
+        ////Collections.synchronizedList(new ArrayList<>()); 小数据量的时候，把线程不安全ArrayList的转换成线程安全的ArrayList
         //多线程时用CopyOnWriteArrayList<>()
         List<String> list = new CopyOnWriteArrayList<>();
-                //Collections.synchronizedList(new ArrayList<>());
+
                 //new Vector<>();
         for (int i = 1; i <=30; i++) {
             new Thread(()->{

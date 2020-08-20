@@ -10,7 +10,7 @@ package com.lujunxiong.thread;
  * DCL单例模式
  **/
 public class SingletonDemo {
-    private static SingletonDemo instance = null;
+    private static volatile SingletonDemo instance = null;
 
     private SingletonDemo() {
         System.out.println(Thread.currentThread().getName() + "\t 我是构造方法SingletonDemo()");
