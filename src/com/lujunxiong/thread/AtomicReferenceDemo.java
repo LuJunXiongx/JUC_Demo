@@ -11,6 +11,7 @@ import java.util.concurrent.atomic.AtomicReference;
  * @Date 2020/8/20
  * @Description: CAS缺点：循环时间长开销很大；只能保证一个共享变量的原子性；会引出ABA问题
  * ABA：狸猫换太子
+ * 原子对象类型
  **/
 
 class User{
