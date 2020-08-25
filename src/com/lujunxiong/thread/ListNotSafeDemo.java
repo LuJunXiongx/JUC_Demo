@@ -16,7 +16,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
  * 3.解决方案
  *      用线程安全的Vector，能保持数据一致性，但性能慢，同一时间段只允许一个人读或写
  *      Collections.synchronizedList(new ArrayList<>())，数据一致性不好，读取效率提升
- *      CopyOnWriteArrayList<>() 写时复制，
+ *      CopyOnWriteArrayList<>() 写时复制
  * 4.优化建议(同样的错误，不出现第2次)
  *
  *

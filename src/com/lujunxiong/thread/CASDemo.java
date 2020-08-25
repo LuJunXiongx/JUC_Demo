@@ -1,5 +1,6 @@
 package com.lujunxiong.thread;
 
+import java.util.HashMap;
 import java.util.concurrent.atomic.AtomicInteger;
 
 /**
@@ -17,6 +18,7 @@ public class CASDemo {
         System.out.println(atomicInteger.compareAndSet(5,2020)+"\t current data：" +atomicInteger.get());
         System.out.println(atomicInteger.compareAndSet(5,1024)+"\t current data：" +atomicInteger.get());
         atomicInteger.getAndIncrement();
+        new HashMap<>();
 
     }
 

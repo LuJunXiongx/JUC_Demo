@@ -21,11 +21,12 @@ import java.util.concurrent.locks.ReentrantReadWriteLock;
  **/
 class MyCache {
     private volatile Map<String, Object> map = new HashMap<>();
-    private ReadWriteLock readWriteLock = new ReentrantReadWriteLock();
+    private ReentrantReadWriteLock reentrantReadWriteLock = new ReentrantReadWriteLock();
+    //private ReadWriteLock readWriteLock = new ReentrantReadWriteLock();
 
 
     public void put(String key, Object value) {
-        readWriteLock.writeLock().lock();
+        reentrantReadWriteLock.writeLock().lock();
         try{
             System.out.println(Thread.currentThread().getName() + "\t ----开始写入"+key);
             //暂停一会线程
@@ -41,13 +42,13 @@ class MyCache {
         }catch (Exception e){
             e.printStackTrace();
         }finally {
-            readWriteLock.writeLock().unlock();
+            reentrantReadWriteLock.writeLock().unlock();
         }
 
     }
 
     public void get(String key) {
-        readWriteLock.readLock().lock();
+        reentrantReadWriteLock.readLock().lock();
         try{
             System.out.println(Thread.currentThread().getName() + "\t 读取数据"+key);
             try {
@@ -62,7 +63,7 @@ class MyCache {
         }catch (Exception e){
             e.printStackTrace();
         }finally {
-            readWriteLock.readLock().unlock();
+            reentrantReadWriteLock.readLock().unlock();
         }
 
     }
