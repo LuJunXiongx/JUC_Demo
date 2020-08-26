@@ -20,7 +20,7 @@ public class MyThreadPoolDemo1 {
                 TimeUnit.SECONDS,
                 new ArrayBlockingQueue<Runnable>(3),
                 Executors.defaultThreadFactory(),
-                //new ThreadPoolExecutor.AbortPolicy()  默认的拒绝策略
+                //new ThreadPoolExecutor.AbortPolicy()  默认的拒绝策略,中断，直接报异常
                 //new ThreadPoolExecutor.CallerRunsPolicy()
                 //new ThreadPoolExecutor.DiscardOldestPolicy()
                 new ThreadPoolExecutor.DiscardOldestPolicy()
