@@ -6,7 +6,7 @@ import java.util.concurrent.*;
  * @ClassName MyThreadPoolDemo1
  * @Author 陆军雄
  * @Date 2020/8/14
- * @Description: 自定义线程池
+ * @Description: 自定义线程池复习
  **/
 public class MyThreadPoolDemo1 {
     public static void main(String[] args) {
